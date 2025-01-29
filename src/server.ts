@@ -1,4 +1,5 @@
 import { app } from "./app"
 import { env } from "./env"
 
-app.listen({ port: env.PORT }).then(() => console.log("HTTP server running"))
+const port = env.PORT || 3337
+app.listen({ port: port }).then(() => console.log("HTTP server running"))
